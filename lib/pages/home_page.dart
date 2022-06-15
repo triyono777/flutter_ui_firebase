@@ -18,9 +18,9 @@ class _HomeState extends State<Home> {
       body: PageView(
         controller: _pageController,
         children: [
-          ContactPage(),
           DashBoardPage(),
           Container(color: Colors.greenAccent.shade700),
+          ContactPage(),
           Container(color: Colors.orange),
         ],
         onPageChanged: (index) {
