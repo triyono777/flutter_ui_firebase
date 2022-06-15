@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_bar/bottom_bar.dart';
+import 'contacts/contact_page.dart';
 import 'dashboard_page.dart';
 
 class Home extends StatefulWidget {
@@ -18,8 +19,8 @@ class _HomeState extends State<Home> {
         controller: _pageController,
         children: [
           DashBoardPage(),
-          Container(color: Colors.red),
           Container(color: Colors.greenAccent.shade700),
+          ContactPage(),
           Container(color: Colors.orange),
         ],
         onPageChanged: (index) {
@@ -47,7 +48,7 @@ class _HomeState extends State<Home> {
           ),
           BottomBarItem(
             icon: Icon(Icons.person),
-            title: Text('Account'),
+            title: Text('Contacs'),
             backgroundColorOpacity: 0.1,
             activeColor: Colors.greenAccent.shade700,
           ),
