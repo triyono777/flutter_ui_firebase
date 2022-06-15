@@ -51,7 +51,7 @@ class _ContactPageState extends State<ContactPage> {
                         subtitle: Text(alldata[index]['phoneNumber'], style: TextStyle(fontSize: 16)),
                         trailing: IconButton(
                             onPressed: () async {
-                              var hasilDariForm = Navigator.push(
+                              var hasilDariFormx = await Navigator.push(
                                 context,
                                 //pass data to edit form
                                 MaterialPageRoute(
@@ -59,7 +59,7 @@ class _ContactPageState extends State<ContactPage> {
                                           id: snapshot.data!.docs[index].id,
                                         )),
                               );
-                              if (hasilDariForm == true) {
+                              if (hasilDariFormx == true) {
                                 setState(() {});
                               }
                             },
