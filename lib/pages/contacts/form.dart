@@ -71,9 +71,9 @@ class _FormPageState extends State<FormPage> {
             //if have data show delete button
             widget.id != null
                 ? IconButton(
-                    onPressed: () {
+                    onPressed: () async {
                       //method to delete data based on id
-                      users!.doc(widget.id).delete();
+                      await users!.doc(widget.id).delete();
 
                       //back to main page
                       // '/' is home

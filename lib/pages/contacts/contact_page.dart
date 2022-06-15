@@ -50,8 +50,8 @@ class _ContactPageState extends State<ContactPage> {
                         title: Text(alldata[index]['name'], style: TextStyle(fontSize: 20)),
                         subtitle: Text(alldata[index]['phoneNumber'], style: TextStyle(fontSize: 16)),
                         trailing: IconButton(
-                            onPressed: () {
-                              Navigator.push(
+                            onPressed: () async {
+                              var hasilDariForm = Navigator.push(
                                 context,
                                 //pass data to edit form
                                 MaterialPageRoute(
@@ -59,6 +59,9 @@ class _ContactPageState extends State<ContactPage> {
                                           id: snapshot.data!.docs[index].id,
                                         )),
                               );
+                              if (hasilDariForm == true) {
+                                setState(() {});
+                              }
                             },
                             icon: Icon(Icons.arrow_forward_rounded)),
                       );
