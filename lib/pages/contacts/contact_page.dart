@@ -75,11 +75,14 @@ class _ContactPageState extends State<ContactPage> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
+        onPressed: () async {
+          var hasilDariForm = await Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => FormPage()),
           );
+          if (hasilDariForm == true) {
+            setState(() {});
+          }
         },
         child: Icon(Icons.add),
       ),

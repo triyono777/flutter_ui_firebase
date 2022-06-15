@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
           ),
           BottomBarItem(
             icon: Icon(Icons.person),
-            title: Text('Account'),
+            title: Text('Contacs'),
             backgroundColorOpacity: 0.1,
             activeColor: Colors.greenAccent.shade700,
           ),

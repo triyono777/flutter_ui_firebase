@@ -77,7 +77,8 @@ class _FormPageState extends State<FormPage> {
 
                       //back to main page
                       // '/' is home
-                      Navigator.of(context).pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
+                      // Navigator.of(context).pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
+                      Navigator.of(context).pop(true);
                     },
                     icon: Icon(Icons.delete))
                 : SizedBox()
@@ -245,7 +246,8 @@ class _FormPageState extends State<FormPage> {
 
                   //back to main page
                   //home page => '/'
-                  Navigator.of(context).pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
+                  // Navigator.of(context).pushNamedAndRemoveUntil('/', (Route<dynamic> route) => false);
+                  Navigator.of(context).pop(true);
                 }
               },
             )
