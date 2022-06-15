@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_bar/bottom_bar.dart';
+import 'contacts/contact_page.dart';
 import 'dashboard_page.dart';
 
 class Home extends StatefulWidget {
@@ -17,8 +18,8 @@ class _HomeState extends State<Home> {
       body: PageView(
         controller: _pageController,
         children: [
+          ContactPage(),
           DashBoardPage(),
-          Container(color: Colors.red),
           Container(color: Colors.greenAccent.shade700),
           Container(color: Colors.orange),
         ],
